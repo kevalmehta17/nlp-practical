@@ -22,8 +22,20 @@ stop_words = set(stopwords.words('english'))
 
 filtered_tokens = []
 for word in tokens:
-    if word.lower() not in stop_words:
+    if word.lower() not in stop_words and word.isalpha():
         filtered_tokens.append(word)
 
 print("\nAfter Stopword Removal:")
 print(filtered_tokens)
+
+
+# stop_words = set(stopwords.words('english'))
+
+# filtered_tokens = []
+
+# for word in tokens:
+#     if word.lower() not in stop_words and word.isalpha():
+#         filtered_tokens.append(word)
+
+# print(filtered_tokens)
+
