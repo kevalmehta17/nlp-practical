@@ -8,14 +8,31 @@ nltk.download('averaged_perceptron_tagger_eng')
 from nltk import word_tokenize, pos_tag
 
 
-sentence = "NLTK is a powerful library for natural language processing."
+# sentence = "NLTK is a powerful library for natural language processing."
 
-tokens = word_tokenize(sentence)
+# tokens = word_tokenize(sentence)
 
-pos_tags = pos_tag(tokens)
+sentences = [
+    "NLTK is a powerful library.",
+    "Python is easy to learn.",
+    "Machine learning is interesting.",
+    "Natural language processing is useful.",
+    "POS tagging assigns grammatical labels."
+]
 
-print("English POS Tags:")
-print(pos_tags)
+# # # POS tagging
+# pos_tags = pos_tag(tokens)
+
+# print("English POS Tags:")
+# print(pos_tags)
+print("English POS Tags:\n")
+
+for i, sentence in enumerate(sentences, 1):
+    tokens = word_tokenize(sentence)
+    pos_tags = pos_tag(tokens)
+    print(f"Sentence {i}:")
+    print(pos_tags)
+    print()
 
 # for indian language
 
